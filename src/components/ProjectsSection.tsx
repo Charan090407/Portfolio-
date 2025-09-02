@@ -6,57 +6,57 @@ import { ExternalLink, Github, Eye } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
+      title: 'Voting System',
+      description: 'Create your own election for any event by using this voting System',
       image: '/placeholder.svg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'TypeScript'],
+      technologies: ['Python', 'Django', 'CSS', 'JavaScript'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/Voting-system',
       featured: true
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Plant disease prediction and classification using AI',
+      description: 'A Plant Disease Prediction and Classification System using AI integrated chatbot for real-time assistance.',
       image: '/placeholder.svg',
-      technologies: ['Vue.js', 'Firebase', 'Vuetify', 'PWA'],
+      technologies: ['python', 'streamlit', 'TensorFlow', 'OpenCV'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/Plant-disease-prediction-using-AI',
       featured: true
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and customizable widgets.',
+      title: 'Quick Ryder - Ride sharing Application',
+      description: 'A Ride sharing application with integrated Drowsiness detection system for safety',
       image: '/placeholder.svg',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'Tailwind CSS'],
+      technologies: ['Python', 'Flask', 'Django', 'PostgreSQL','Java'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/QuickRydrr',
+      featured: false
+    },
+    {
+      title: 'YT and spotify AI Assistant',
+      description: 'A voice command assisted music player that integrates with YouTube and Spotify for seamless music streaming.',
+      image: '/placeholder.svg',
+      technologies: ['python','pywhatkit', 'Spotify API'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/YT-AI-Assistant',
       featured: false
     },
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing projects and skills with smooth animations and responsive design.',
       image: '/placeholder.svg',
-      technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'MDX'],
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/Portfolio-',
       featured: false
     },
     {
-      title: 'Social Media Analytics',
-      description: 'A data visualization dashboard for social media metrics with real-time updates and comprehensive reporting.',
-      image: '/placeholder.svg',
-      technologies: ['Python', 'Flask', 'D3.js', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      title: 'Mobile Fitness App',
+      title: 'FriensCorner-A Blog Website',
       description: 'A cross-platform mobile application for fitness tracking with workout plans and progress monitoring.',
       image: '/placeholder.svg',
       technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Charan090407/FriendsCorner',
       featured: false
     }
   ];
@@ -88,14 +88,18 @@ const ProjectsSection = () => {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                     <div className="flex space-x-4">
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary" className="bg-white/90 text-foreground hover:bg-white">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
                       </Button>
-                      <Button size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                      </a>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10">
                         <Github className="h-4 w-4 mr-2" />
                         Code
                       </Button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -144,9 +148,11 @@ const ProjectsSection = () => {
                       <ExternalLink className="h-3 w-3 mr-2" />
                       Demo
                     </Button>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Button size="sm" variant="outline">
                       <Github className="h-3 w-3" />
                     </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
