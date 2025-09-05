@@ -5,47 +5,47 @@ import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Master of Computer Science Engineering ',
+      degree: ' Computer Science Engineering ',
       institution: 'Kalasalingam Academy of Research and Education',
       location: 'Virudhunagar, Tamil Nadu',
       period: '2022 - 2026',
-      description: 'Specialized in Machine Learning and Software Engineering. Graduated with honors.',
-      achievements: ['Summa Cum Laude', 'Research Assistant', 'Dean\'s List']
+      description: 'Specialized in Machine Learning and Software Engineering. Still Pursuing.',
+      achievements: ['Euphoria 2k25 Owasp Hackathon Winner(2nd place)']
     },
     {
-      degree: 'Bachelor of Science in Software Engineering',
-      institution: 'State University',
-      location: 'Los Angeles, CA',
-      period: '2016 - 2020',
-      description: 'Comprehensive study of software development principles, algorithms, and system design.',
-      achievements: ['Magna Cum Laude', 'Programming Club President', 'Hackathon Winner']
+      degree: 'Intermediate Education ',
+      institution: 'Sri Chaithanya collage',
+      location: 'Vijayawada, Andhra Pradesh',
+      period: '2008 - 2020',
+      description: 'Stream studied is Mathematics, Physics and Chemistry',
+      achievements: ['Board Public Examination Top ranker','JEE MAINS', 'Qualified for JEE Advance']
     }
   ];
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      icon: '☁️'
+      name: 'Samgatha X Vashisht 2025🥈',
+      issuer: 'IITDM, Kancheepuram',
+      date: '31 March, 2025',
+      icon: '♾️'
     },
     {
-      name: 'React Professional Developer',
-      issuer: 'Meta',
-      date: '2023',
-      icon: '⚛️'
+      name: 'Euphoria - TECH FORGE Winner🥇',
+      issuer: 'IBM',
+      date: '12 March, 2025',
+      icon: '🌐'
     },
     {
-      name: 'Google UX Design Certificate',
-      issuer: 'Google',
-      date: '2022',
-      icon: '🎨'
+      name: 'AI & Industry-Driven Approches to site Reliability Engineering and Microservices',
+      issuer: 'ACM',
+      date: '27 Dec, 2024',
+      icon: '🌐'
     },
     {
-      name: 'Certified Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      date: '2022',
-      icon: '🚢'
+      name: 'SDGATHON 2025 ',
+      issuer: 'KPR Institute of Engineering and Technology',
+      date: '22 March, 2025',
+      icon: '♾️'
     }
   ];
 

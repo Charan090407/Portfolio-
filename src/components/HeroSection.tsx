@@ -12,22 +12,37 @@ const HeroSection = () => {
   return (
 <section
   id="hero"
-  className="min-h-screen flex items-center justify-center relative overflow-hidden group"
+  className="min-h-screen flex items-center justify-center relative overflow-hidden group bg-[#0a0f1a]"
 >
-  {/* Gradient Background */}
-  <div className="absolute inset-0 bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end transition-all duration-500 group-hover:from-indigo-500 group-hover:to-purple-600"></div>
-  
-  {/* Animated Background Elements */}
-  <div className="absolute inset-0">
-    <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-xl animate-float transition-all duration-500 group-hover:bg-indigo-400/20"></div>
-    <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-xl animate-float transition-all duration-500 group-hover:bg-purple-400/10" style={{ animationDelay: '2s' }}></div>
-    <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-white/10 rounded-full blur-xl animate-float transition-all duration-500 group-hover:bg-pink-400/20" style={{ animationDelay: '4s' }}></div>
+  {/* Animated Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-black animate-gradient-x opacity-90"></div>
+
+  {/* Particle Effect */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    {Array.from({ length: 40 }).map((_, i) => (
+      <div
+        key={i}
+        className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-particle"
+        style={{
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 5}s`,
+          animationDuration: `${5 + Math.random() * 10}s`,
+          opacity: Math.random() * 0.8 + 0.2,
+        }}
+      />
+    ))}
   </div>
 
-  <div className="container mx-auto px-6 text-center text-hero-text relative z-10">
+  {/* Glowing Orbs */}
+  <div className="absolute -top-20 -left-20 w-96 h-96 bg-cyan-400/20 rounded-full blur-[120px] animate-pulse"></div>
+  <div className="absolute bottom-0 right-0 w-[32rem] h-[32rem] bg-purple-600/20 rounded-full blur-[150px] animate-pulse delay-1000"></div>
+
+  {/* Content */}
+  <div className="container mx-auto px-6 text-center text-white relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="text-white">MAJJIGA CHARAN YADAV</span>
+            Hi, I'm <span className="text-cyan-400">MAJJIGA CHARAN YADAV</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-white/90">
             Python Backend Developer | Web Developer | Open Source Enthusiast
@@ -38,6 +53,7 @@ const HeroSection = () => {
           </p>
         </div>
 
+        {/* Buttons */}
         <div className="animate-slide-in-right flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button 
               size="lg" 
@@ -65,27 +81,17 @@ const HeroSection = () => {
 
         {/* Social Links */}
           <div className="animate-fade-in flex justify-center space-x-6 mb-16" style={{ animationDelay: '0.5s' }}>
-            <a
-              href="https://github.com/Charan090407"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/Charan090407" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                 <Github className="h-6 w-6" />
               </Button>
             </a>
-            <a
-              href="https://www.linkedin.com/in/m-charan-yadav-5595b8268/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/m-charan-yadav-5595b8268/" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                 <Linkedin className="h-6 w-6" />
               </Button>
             </a>
-            <a
-              href="mailto:mcharanyadav09358@gmail.com"
-            >
+            <a href="mailto:mcharanyadav09358@gmail.com">
               <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                 <Mail className="h-6 w-6" />
               </Button>

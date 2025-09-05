@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       description: 'A personal portfolio website showcasing projects and skills with smooth animations and responsive design.',
       image: '/placeholder.svg',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX'],
-      liveUrl: '#',
+      liveUrl: 'https://portfolio-npce.onrender.com/',
       githubUrl: 'https://github.com/Charan090407/Portfolio-',
       featured: false
     },
@@ -144,14 +144,16 @@ const ProjectsSection = () => {
                     )}
                   </div>
                   <div className="flex space-x-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <ExternalLink className="h-3 w-3 mr-2" />
-                      Demo
-                    </Button>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button size="sm" variant="outline" className="w-full">
+                          <ExternalLink className="h-3 w-3 mr-2" />
+                          Demo
+                      </Button>
+                    </a>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Button size="sm" variant="outline">
-                      <Github className="h-3 w-3" />
-                    </Button>
+                      <Button size="sm" variant="outline">
+                        <Github className="h-3 w-3" />
+                        </Button>
                     </a>
                   </div>
                 </CardContent>
